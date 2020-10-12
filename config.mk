@@ -7,3 +7,6 @@ PRODUCT_COPY_FILES += $(LOCAL_ETC)/privapp.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/per
 
 PRODUCT_PACKAGES += \
     QKSMS
+
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/apps/QKSMS/overlay
