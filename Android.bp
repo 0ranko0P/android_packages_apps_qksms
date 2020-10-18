@@ -1,0 +1,34 @@
+
+android_app_import {
+	name: "QKSMS",
+	apk: "QKSMS.apk",
+	presigned: true,
+
+	dex_preopt: {
+		enabled: false,
+	},
+
+	required: ["privapp-permissions-qksms.xml", "qksms-hiddenapi-whitelist.xml", "qksms-power-whitelist.xml"],
+
+	privileged: true,
+	product_specific: true,
+	overrides: ["messaging"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-qksms.xml",
+    sub_dir: "permissions",
+    src: "etc/privapp-permissions-qksms.xml",
+}
+
+prebuilt_etc {
+    name: "qksms-hiddenapi-whitelist.xml",
+    sub_dir: "permissions",
+    src: "etc/qksms-hiddenapi-whitelist.xml",
+}
+
+prebuilt_etc {
+    name: "qksms-power-whitelist.xml",
+    sub_dir: "permissions",
+    src: "etc/qksms-power-whitelist.xml",
+}
